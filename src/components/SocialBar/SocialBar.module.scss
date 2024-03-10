@@ -1,0 +1,7 @@
+.SocialBar-Icon {
+  transition: 200ms;
+  &:hover {
+    transform: translateY(-5px);
+    transition: 200ms;
+  }
+}
