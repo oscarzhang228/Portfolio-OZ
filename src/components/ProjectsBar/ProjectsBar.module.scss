@@ -3,28 +3,48 @@
 }
 
 .Project-Title {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: 600;
+  // for tablets
+  @media screen and (max-width: 769px) {
+    font-size: 1.7rem;
+  }
   // for mobile devices
-  @media screen and (max-width: 376px) {
-    font-size: 1.4rem;
+  @media screen and (max-width: 576px) {
+    font-size: 1.5rem;
   }
 }
 
 .Project-Subtitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  // for mobile devices
-  @media screen and (max-width: 376px) {
-    font-size: 1rem;
+  // for tablets
+  @media screen and (max-width: 769px) {
+    font-size: 1.1rem;
+  }
+  // for mobile devices and small tablets
+  @media screen and (max-width: 576px) {
+    font-size: 0.9rem;
   }
 }
 
 .Project-Body {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  // for mobile devices
-  @media screen and (max-width: 376px) {
-    font-size: 0.8rem;
+  // for mobile devices and small tablets
+  @media screen and (max-width: 576px) {
+    font-size: 0.7rem;
+  }
+}
+
+.ProjectsBar-ProjectContainer {
+  width: 30%;
+  // tabs and small laptops
+  @media screen and (max-width: 1025px) {
+    width: 45%;
+  }
+  // for mobile and small tablets
+  @media screen and (max-width: 576px) {
+    width: 95%;
   }
 }

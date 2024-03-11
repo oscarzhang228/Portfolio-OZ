@@ -2,26 +2,43 @@ import styles from "./ProjectsBar.module.scss";
 import Card from "@mui/material/Card";
 import { CardContent, CardActions, Chip } from "@mui/material";
 import oudAppPic from "../../assets/oud-app.png";
+import marketSafePic from "../../assets/market-safe.png";
 /**
  * ProjectsBar component used to display projects.
  */
 export default function ProjectsBar() {
   return (
     <section className={`${styles["ProjectsBar"]} p-3`}>
-      <div className="container-fluid">
-        <section className="row gx-3">
+      <div className="d-flex justify-content-around flex-wrap">
+        <section className={`${styles["ProjectsBar-ProjectContainer"]}`}>
           <Project
-            title="Opiod Use Disorder App"
-            company="Social Dynamics and Well-Being Lab"
-            description="A web application that allows participants to read question response pairs related to opioid use disorders and answer questions for an ongoing study. Tracks analytics such as time spent on each question as well as which buttons were clicked."
+            title="OUD App"
+            company="SocWeB Lab"
+            description="A web application for an ongoing study surrounding how those with Opiod Use Disorder react to GPT-4 generated responses versus real responses. Features include tracking analytics such as time spent on each page as well as getting GPT-4 and user-generated responses."
             projectLink=""
             projectImage={oudAppPic}
             technologies={[
               "React",
               "TypeScript",
               "MongoDB",
-              "Vercel Serverless Functions",
               "SASS",
+              "Vercel Serverless Functions",
+            ]}
+          />
+        </section>
+        <section className={`${styles["ProjectsBar-ProjectContainer"]}`}>
+          <Project
+            title="MarketSafe"
+            company="HackED 2024"
+            description="A hackathon project utilizing LLMs to detect misinformation from Amazon reviews automatically from a link to the product. Features include charts displaying data, an accurate percentage of how possible the review is fake, and a list of the most likely fake reviews."
+            projectLink=""
+            projectImage={marketSafePic}
+            technologies={[
+              "React",
+              "Flask",
+              "SQLite",
+              "OpenAI API",
+              "Google Cloud BigQuery",
             ]}
           />
         </section>
@@ -37,7 +54,6 @@ type ProjectProps = {
   projectLink: string;
   projectImage: string;
   technologies: string[];
-  size?: string;
 };
 
 /**
@@ -47,7 +63,7 @@ type ProjectProps = {
  * @param description Description of the project.
  * @param projectLink Link to the project.
  * @param projectImage Image of the project.
- * @param size Size of the project in terms of bootstrap colors. Used to override the default
+
  * @param technologiesColor Color of the chips for the technologies used.
  * @param technologies Technologies used in the project.
  * @returns Project component used to display a project.
@@ -59,17 +75,15 @@ const Project = (props: ProjectProps) => {
     description,
     projectLink,
     projectImage,
-    size,
     technologies,
   } = props;
 
-  const sizeClass = size ? size : "col-12 col-md-6 col-lg-5 col-xl-4";
   return (
-    <Card className={`${sizeClass} text-center`}>
+    <Card className={`${styles["ProjectsBar-Project"]} w-100 text-center`}>
       <CardContent>
         <img src={projectImage} className={`mw-100 border rounded `} />
-        <h1 className={`${styles["Project-Title"]} py-2`}>{title}</h1>
-        <h2 className={`${styles["Project-Subtitle"]}`}>{company}</h2>
+        <h1 className={`${styles["Project-Title"]} pt-2`}>{title}</h1>
+        <h2 className={`${styles["Project-Subtitle"]} py-2`}>{company}</h2>
         <p className={`${styles["Project-Body"]} px-3`}>{description}</p>
         <section className="d-flex flex-wrap gap-2 justify-content-center">
           {technologies?.map((tech, index) => {
