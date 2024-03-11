@@ -38,13 +38,13 @@
 }
 
 .ProjectsBar-ProjectContainer {
-  width: 30%;
+  flex-basis: 33%;
   // tabs and small laptops
   @media screen and (max-width: 1025px) {
-    width: 45%;
+    flex-basis: 50%;
   }
   // for mobile and small tablets
   @media screen and (max-width: 576px) {
-    width: 95%;
+    flex-basis: 100%;
   }
 }
