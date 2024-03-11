@@ -1,6 +1,6 @@
 import styles from "./ProjectsBar.module.scss";
 import Card from "@mui/material/Card";
-import { CardContent, CardActions } from "@mui/material";
+import { CardContent, CardActions, Chip } from "@mui/material";
 import oudAppPic from "../../assets/oud-app.png";
 /**
  * ProjectsBar component used to display projects.
@@ -13,9 +13,16 @@ export default function ProjectsBar() {
           <Project
             title="Opiod Use Disorder App"
             company="Social Dynamics and Well-Being Lab"
-            description="A mobile app for the Social Dynamics and Well-Being Lab at the University of Oklahoma."
+            description="A web application that allows participants to read question response pairs related to opioid use disorders and answer questions for an ongoing study. Tracks analytics such as time spent on each question as well as which buttons were clicked."
             projectLink=""
             projectImage={oudAppPic}
+            technologies={[
+              "React",
+              "TypeScript",
+              "MongoDB",
+              "Vercel Serverless Functions",
+              "SASS",
+            ]}
           />
         </section>
       </div>
@@ -29,23 +36,61 @@ type ProjectProps = {
   description: string;
   projectLink: string;
   projectImage: string;
-  size?: number;
+  technologies: string[];
+  size?: string;
 };
+
 /**
- * Project component used to display a single project.
+ *
+ * @param title Name of the project.
+ * @param company Name of the company.
+ * @param description Description of the project.
+ * @param projectLink Link to the project.
+ * @param projectImage Image of the project.
+ * @param size Size of the project in terms of bootstrap colors. Used to override the default
+ * @param technologiesColor Color of the chips for the technologies used.
+ * @param technologies Technologies used in the project.
+ * @returns Project component used to display a project.
  */
 const Project = (props: ProjectProps) => {
-  const { title, company, description, projectLink, projectImage, size } =
-    props;
+  const {
+    title,
+    company,
+    description,
+    projectLink,
+    projectImage,
+    size,
+    technologies,
+  } = props;
 
-  const sizeClass = size ? `col-${size}` : "col-3";
+  const sizeClass = size ? size : "col-12 col-md-6 col-lg-5 col-xl-4";
   return (
     <Card className={`${sizeClass} text-center`}>
       <CardContent>
         <img src={projectImage} className={`mw-100 border rounded `} />
         <h1 className={`${styles["Project-Title"]} py-2`}>{title}</h1>
         <h2 className={`${styles["Project-Subtitle"]}`}>{company}</h2>
-        <p className={`${styles["Project-Body"]}`}>{description}</p>
+        <p className={`${styles["Project-Body"]} px-3`}>{description}</p>
+        <section className="d-flex flex-wrap gap-2 justify-content-center">
+          {technologies?.map((tech, index) => {
+            return (
+              <Chip
+                key={index}
+                label={tech}
+                sx={{
+                  fontWeight: "400",
+                  fontFamily: "Poppins, sans-serif",
+                  transition: "500ms",
+                  "&:hover": {
+                    backgroundColor: "rgb(155, 184, 205)",
+                    transform: "translateY(-5px)",
+                    transition: "500ms",
+                  },
+                }}
+              />
+            );
+          })}
+        </section>
       </CardContent>
       <CardActions>hello</CardActions>
     </Card>

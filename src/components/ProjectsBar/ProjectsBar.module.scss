@@ -5,14 +5,26 @@
 .Project-Title {
   font-size: 1.7rem;
   font-weight: 600;
+  // for mobile devices
+  @media screen and (max-width: 376px) {
+    font-size: 1.4rem;
+  }
 }
 
 .Project-Subtitle {
   font-size: 1.2rem;
   font-weight: 500;
+  // for mobile devices
+  @media screen and (max-width: 376px) {
+    font-size: 1rem;
+  }
 }
 
 .Project-Body {
   font-size: 1rem;
   font-weight: 400;
+  // for mobile devices
+  @media screen and (max-width: 376px) {
+    font-size: 0.8rem;
+  }
 }

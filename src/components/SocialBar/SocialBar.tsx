@@ -38,6 +38,7 @@ const linkedInStyle = {
   width: "3.25rem",
   height: "3.25rem",
   padding: "0",
+  color: "black",
 };
 
 const iconStyle = {
