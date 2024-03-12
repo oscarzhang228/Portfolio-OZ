@@ -39,6 +39,12 @@
 
 .ProjectsBar-ProjectContainer {
   flex-basis: 33%;
+  transition: 300ms;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 300ms;
+  }
   // tabs and small laptops
   @media screen and (max-width: 1025px) {
     flex-basis: 50%;
