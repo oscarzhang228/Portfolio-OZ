@@ -10,8 +10,8 @@ import Button from "@mui/material/Button";
  */
 export default function ProjectsBar() {
   return (
-    <section className={`${styles["ProjectsBar"]} p-3`}>
-      <div className="d-flex justify-content-around flex-wrap p-5">
+    <section className={`${styles["ProjectsBar"]} p-2 p-lg-5`}>
+      <div className="d-flex justify-content-around flex-wrap ">
         <section className={`${styles["ProjectsBar-ProjectContainer"]}`}>
           <Project
             title="OUD App"

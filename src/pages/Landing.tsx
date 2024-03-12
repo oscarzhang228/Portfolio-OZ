@@ -8,8 +8,10 @@ import SocialBar from "../components/SocialBar/SocialBar";
 export default function Landing() {
   return (
     <section className="page blue-page d-flex flex-column ">
-      <Profile />
-      <SocialBar />
+      <section className="pb-5 pt-3 hero d-flex flex-column justify-content-center">
+        <Profile />
+        <SocialBar />
+      </section>
       <ProjectsBar />
     </section>
   );

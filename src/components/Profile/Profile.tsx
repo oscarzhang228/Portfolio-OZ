@@ -12,7 +12,7 @@ export default function Profile() {
         <h1 className={`${styles["Profile-Title"]} pt-2`}>Oscar Zhang</h1>
         <h2 className={`${styles["Profile-Subtitle"]}`}>Software Engineer</h2>
         <p className={`${styles["Profile-Body"]} px-5`}>
-          I build value through creating scalable and easy to read software.
+          I build value through creating scalable and easy to read code.
         </p>
       </section>
     </section>
