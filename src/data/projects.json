@@ -1,0 +1,37 @@
+[
+  {
+    "title": "OUD App",
+    "company": "SocWeB Lab",
+    "description": "A web application for an ongoing study surrounding how those with Opioid Use Disorder react to GPT-4 responses versus user responses. Features include tracking analytics such as time spent on each page, getting the responses to show, as well as an automatic glossary feature.",
+    "projectLink": "https://github.com/oscarzhang228/SocWeB-Opioid-Study",
+    "projectImage": "oudAppPic",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "MongoDB",
+      "Vercel Serverless Functions"
+    ]
+  },
+  {
+    "title": "MarketSafe",
+    "company": "HackED 2024",
+    "description": "A hackathon project utilizing LLMs to detect misinformation from Amazon reviews automatically from a link to the product. Features include data analysis and display through charts, an accurate percentage of the confidence level, and a list of the most likely fake reviews.",
+    "projectLink": "https://devpost.com/software/marketsafe",
+    "projectImage": "marketSafePic",
+    "technologies": [
+      "React",
+      "Flask",
+      "SQLite",
+      "GPT API",
+      "Google Cloud BigQuery"
+    ]
+  },
+  {
+    "title": "Skyview Portal",
+    "company": "Fyve By",
+    "description": "An application for hangar managers in order to schedule plane arrivals and departures, view security footage of their hangar, and view their account and billing information. Features include a login system through AWS Cognito, a scheduling system, and a billing system.",
+    "projectLink": "https://fyvebyhub.com",
+    "projectImage": "skyviewPic",
+    "technologies": ["React", "AWS DynamoDB", "AWS Lambda", "AWS Cognito"]
+  }
+]

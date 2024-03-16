@@ -1,12 +1,21 @@
 import styles from "./ProjectsBar.module.scss";
 import Card from "@mui/material/Card";
 import { CardContent, CardActions, Chip } from "@mui/material";
-import oudAppPic from "../../assets/oud-app.png";
-import marketSafePic from "../../assets/market-safe.png";
-import skyviewPic from "../../assets/skyview-portal.png";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
+import oudAppPic from "../../assets/oud-app.png";
+import marketSafePic from "../../assets/market-safe.png";
+import skyviewPic from "../../assets/skyview-portal.png";
+import projects from "../../data/projects.json";
+
+const imageMap: any = {
+  oudAppPic: oudAppPic,
+  marketSafePic: marketSafePic,
+  skyviewPic: skyviewPic,
+};
+
+const firstThreeProjects = projects.slice(0, 3);
 /**
  * ProjectsBar component used to display projects.
  */
@@ -18,53 +27,21 @@ export default function ProjectsBar() {
     >
       <h1 className={`${styles["ProjectsBar-Header"]} p-1`}>I've worked on:</h1>
       <section className="d-flex justify-content-around flex-wrap ">
-        <section className={`${styles["ProjectsBar-ProjectContainer"]} `}>
-          <Project
-            title="OUD App"
-            company="SocWeB Lab"
-            description="A web application for an ongoing study surrounding how those with Opioid Use Disorder react to GPT-4 responses versus user responses. Features include tracking analytics such as time spent on each page, getting the responses to show, as well as an automatic glossary feature."
-            projectLink="https://github.com/oscarzhang228/SocWeB-Opioid-Study"
-            projectImage={oudAppPic}
-            technologies={[
-              "React",
-              "TypeScript",
-              "MongoDB",
-
-              "Vercel Serverless Functions",
-            ]}
-          />
-        </section>
-        <section className={`${styles["ProjectsBar-ProjectContainer"]}`}>
-          <Project
-            title="MarketSafe"
-            company="HackED 2024"
-            description="A hackathon project utilizing LLMs to detect misinformation from Amazon reviews automatically from a link to the product. Features include data analysis and display through charts, an accurate percentage of the confidence level, and a list of the most likely fake reviews."
-            projectLink="https://devpost.com/software/marketsafe"
-            projectImage={marketSafePic}
-            technologies={[
-              "React",
-              "Flask",
-              "SQLite",
-              "GPT API",
-              "Google Cloud BigQuery",
-            ]}
-          />
-        </section>
-        <section className={`${styles["ProjectsBar-ProjectContainer"]}`}>
-          <Project
-            title="Skyview Portal"
-            company="Fyve By"
-            description="An application for hangar managers in order to schedule plane arrivals and departures, view security footage of their hangar, and view their account and billing information. Features include a login system through AWS Cognito, a scheduling system, and a billing system."
-            projectLink="https://fyvebyhub.com"
-            projectImage={skyviewPic}
-            technologies={[
-              "React",
-              "AWS DynamoDB",
-              "AWS Lambda",
-              "AWS Cognito",
-            ]}
-          />
-        </section>
+        {firstThreeProjects.map((project, index) => {
+          return (
+            <section className={`${styles["ProjectsBar-ProjectContainer"]} `}>
+              <Project
+                key={index}
+                title={project.title}
+                company={project.company}
+                description={project.description}
+                projectLink={project.projectLink}
+                projectImage={imageMap[project.projectImage]}
+                technologies={project.technologies}
+              />
+            </section>
+          );
+        })}
       </section>
       <section>
         <Button
