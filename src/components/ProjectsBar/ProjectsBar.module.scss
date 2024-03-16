@@ -2,6 +2,19 @@
   background-color: #faf9f6;
 }
 
+.ProjectsBar-Header {
+  font-size: 2.5rem;
+  font-weight: 400;
+
+  @media screen and (max-width: 769px) {
+    font-size: 2.3rem;
+  }
+  // for mobile devices
+  @media screen and (max-width: 576px) {
+    font-size: 2.1rem;
+  }
+}
+
 .Project-Title {
   font-size: 1.9rem;
   font-weight: 600;

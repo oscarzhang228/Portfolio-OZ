@@ -5,14 +5,20 @@ import oudAppPic from "../../assets/oud-app.png";
 import marketSafePic from "../../assets/market-safe.png";
 import skyviewPic from "../../assets/skyview-portal.png";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
+
 /**
  * ProjectsBar component used to display projects.
  */
 export default function ProjectsBar() {
+  const navigate = useNavigate();
   return (
-    <section className={`${styles["ProjectsBar"]} p-2 p-lg-5`}>
-      <div className="d-flex justify-content-around flex-wrap ">
-        <section className={`${styles["ProjectsBar-ProjectContainer"]}`}>
+    <section
+      className={`${styles["ProjectsBar"]} p-2 p-lg-5 d-flex flex-column gap-2`}
+    >
+      <h1 className={`${styles["ProjectsBar-Header"]} p-1`}>I've worked on:</h1>
+      <section className="d-flex justify-content-around flex-wrap ">
+        <section className={`${styles["ProjectsBar-ProjectContainer"]} `}>
           <Project
             title="OUD App"
             company="SocWeB Lab"
@@ -59,7 +65,18 @@ export default function ProjectsBar() {
             ]}
           />
         </section>
-      </div>
+      </section>
+      <section>
+        <Button
+          sx={learnMoreButtonStyle}
+          onClick={() => {
+            navigate("/projects");
+          }}
+          variant="outlined"
+        >
+          All Projects
+        </Button>
+      </section>
     </section>
   );
 }
@@ -129,6 +146,7 @@ const Project = (props: ProjectProps) => {
           onClick={() => {
             window.open(projectLink, "_blank");
           }}
+          variant="outlined"
         >
           Learn More
         </Button>
@@ -139,4 +157,11 @@ const Project = (props: ProjectProps) => {
 
 const learnMoreButtonStyle = {
   fontFamily: "Poppins, sans-serif",
+  color: "black",
+  border: "none",
+  "&:hover": {
+    transform: "translateY(-5px)",
+    transition: "500ms",
+    border: "none",
+  },
 };
