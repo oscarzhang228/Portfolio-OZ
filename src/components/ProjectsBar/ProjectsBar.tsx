@@ -25,8 +25,10 @@ export default function ProjectsBar() {
     <section
       className={`${styles["ProjectsBar"]} p-2 p-lg-5 d-flex flex-column gap-2`}
     >
-      <h1 className={`${styles["ProjectsBar-Header"]} p-1`}>I've worked on:</h1>
-      <section className="d-flex justify-content-around flex-wrap ">
+      <h1 className={`${styles["ProjectsBar-Header"]} p-2 px-3`}>
+        I've worked on:
+      </h1>
+      <section className="d-flex justify-content-around flex-wrap gap-1">
         {firstThreeProjects.map((project, index) => {
           return (
             <section className={`${styles["ProjectsBar-ProjectContainer"]} `}>
@@ -43,7 +45,7 @@ export default function ProjectsBar() {
           );
         })}
       </section>
-      <section>
+      <section className={`${styles["ProjectsBar-AllProjects"]}`}>
         <Button
           sx={learnMoreButtonStyle}
           onClick={() => {

@@ -1,0 +1,14 @@
+@use "../../styles/variables" as *;
+
+.Navigation-Item {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: $main-font;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $light-blue;
+  }
+}

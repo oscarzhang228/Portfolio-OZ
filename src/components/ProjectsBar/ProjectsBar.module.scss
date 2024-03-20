@@ -4,7 +4,12 @@
 
 .ProjectsBar-Header {
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 500;
+
+  // width at which 3 projects split into 2 rows
+  @media screen and (max-width: 1025px) {
+    text-align: center;
+  }
 
   @media screen and (max-width: 769px) {
     font-size: 2.3rem;
@@ -25,6 +30,13 @@
   // for mobile devices
   @media screen and (max-width: 576px) {
     font-size: 1.5rem;
+  }
+}
+
+.ProjectsBar-AllProjects {
+  // width at which 3 projects split into 2 rows
+  @media screen and (max-width: 1025px) {
+    text-align: center;
   }
 }
 
@@ -63,7 +75,7 @@
   }
   // tabs and small laptops
   @media screen and (max-width: 1025px) {
-    flex-basis: 50%;
+    flex-basis: 48%;
   }
   // for mobile and small tablets
   @media screen and (max-width: 576px) {
