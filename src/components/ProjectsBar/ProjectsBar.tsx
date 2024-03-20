@@ -52,6 +52,7 @@ export default function ProjectsBar() {
             navigate("/projects");
           }}
           variant="outlined"
+          disabled
         >
           All Projects
         </Button>
