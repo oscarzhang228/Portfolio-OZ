@@ -9,6 +9,10 @@ import ChecklistIcon from "@mui/icons-material/Checklist";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { ReactElement } from "react";
 
 type NavigationProps = {
@@ -30,6 +34,20 @@ export default function Navigation(props: NavigationProps) {
     setOpen(!open);
   };
 
+  /**
+   * Handles the click event for the navigation items on the same page
+   * @param ref reference to the element to scroll to
+   */
+  const handleNavigationSamePage = (ref: React.RefObject<HTMLElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+    toggleDrawer();
+  };
+
+  const handleNavigationExternal = (link: string) => {
+    window.open(link, "_blank");
+  };
   return (
     <>
       <Button onClick={toggleDrawer} sx={navigationButtonStyle}>
@@ -41,35 +59,61 @@ export default function Navigation(props: NavigationProps) {
         variant="temporary"
         sx={drawerStyle}
       >
-        <section className={`py-3 px-4 d-flex flex-column gap-3`}>
+        <section className={`py-4 px-4 d-flex flex-column gap-3 h-100`}>
           <NavigationItem
             icon={<HomeOutlinedIcon />}
             text="Home"
-            navRef={homeRef}
-            toggleDrawer={toggleDrawer}
+            onClick={() => handleNavigationSamePage(homeRef)}
           />
           <Divider />
           <NavigationItem
             icon={<ChecklistIcon />}
             text="Projects"
-            navRef={projectsRef}
-            toggleDrawer={toggleDrawer}
+            onClick={() => handleNavigationSamePage(projectsRef)}
           />
           <NavigationItem
             icon={<WorkOutlineOutlinedIcon />}
             text="Experience"
-            toggleDrawer={toggleDrawer}
           />
           <Divider />
+          <NavigationItem icon={<PersonOutlinedIcon />} text="About" />
+          <NavigationItem icon={<LocalPhoneOutlinedIcon />} text="Contact" />
+
+          {/*This section is used to separate the navigation items at the top and the ones at the bottom */}
+          <section className="mt-auto"></section>
           <NavigationItem
-            icon={<PersonOutlinedIcon />}
-            text="About"
-            toggleDrawer={toggleDrawer}
-          />
+            icon={<ArticleOutlinedIcon />}
+            text="Resume"
+            onClick={() =>
+              handleNavigationExternal(
+                "https://drive.google.com/file/d/1oh-SenQzfQggCx2H306BzVdGYuu7ZDfN/view?usp=sharing"
+              )
+            }
+          ></NavigationItem>
+
           <NavigationItem
-            icon={<LocalPhoneOutlinedIcon />}
-            text="Contact"
-            toggleDrawer={toggleDrawer}
+            icon={<GitHubIcon />}
+            text="GitHub"
+            onClick={() =>
+              handleNavigationExternal("https://github.com/oscarzhang228")
+            }
+          ></NavigationItem>
+          <Divider />
+          <NavigationItem
+            icon={<LinkedInIcon />}
+            text="LinkedIn"
+            onClick={() =>
+              handleNavigationExternal(
+                "https://www.linkedin.com/in/oscarzhang228/"
+              )
+            }
+          ></NavigationItem>
+          <NavigationItem
+            icon={<EmailOutlinedIcon />}
+            text="Email"
+            onClick={() =>
+              handleNavigationExternal("mailto:oscarzhang228@gmail.com")
+            }
           />
         </section>
       </Drawer>
@@ -79,8 +123,7 @@ export default function Navigation(props: NavigationProps) {
 type NavigationItemProps = {
   icon: ReactElement;
   text: string;
-  navRef?: React.RefObject<HTMLElement>;
-  toggleDrawer?: () => void;
+  onClick?: () => void;
 };
 
 /**
@@ -89,19 +132,12 @@ type NavigationItemProps = {
  * @returns NavigationItem component used to display a navigation item.
  */
 const NavigationItem = (props: NavigationItemProps) => {
-  const { icon, text, navRef, toggleDrawer } = props;
+  const { icon, text, onClick } = props;
 
   return (
-    <section
-      className="d-flex gap-3 align-items-center"
-      onClick={() => {
-        // scroll and then close the drawer
-        navRef?.current?.scrollIntoView();
-        toggleDrawer?.();
-      }}
-    >
+    <section className="d-flex gap-3 align-items-center" onClick={onClick}>
       {icon}
-      <h1 className={`${styles["Navigation-Item"]} m-0 pt-1`}>{text}</h1>
+      <h1 className={`${styles["Navigation-Item"]} m-0`}>{text}</h1>
     </section>
   );
 };
