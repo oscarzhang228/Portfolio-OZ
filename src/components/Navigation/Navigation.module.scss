@@ -12,9 +12,9 @@
   transition: color 0.3s ease;
   cursor: pointer;
 
-  transition: 200ms;
+  transition: 400ms;
   &:hover {
     transform: translateX(5px);
-    transition: 200ms;
+    transition: 400ms;
   }
 }
