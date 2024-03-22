@@ -4,7 +4,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import styles from "./SocialBar.module.scss";
 
 /**
- * SocialBar component used to display social media links and icons.
+ * SocialBar component used to display the social media icons on the landing page
+ * @returns SocialBar component
  */
 export default function SocialBar() {
   return (

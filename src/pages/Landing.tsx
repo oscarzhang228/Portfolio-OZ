@@ -1,3 +1,4 @@
+import ExperienceBar from "../components/ExperienceBar/ExperienceBar";
 import Profile from "../components/Profile/Profile";
 import ProjectsBar from "../components/ProjectsBar/ProjectsBar";
 import SocialBar from "../components/SocialBar/SocialBar";
@@ -5,13 +6,16 @@ import SocialBar from "../components/SocialBar/SocialBar";
 type LandingProps = {
   homeRef: React.RefObject<HTMLElement>;
   projectsRef: React.RefObject<HTMLElement>;
+  experienceRef: React.RefObject<HTMLElement>;
 };
 
 /**
- * Landing page for the website
+ * Landing page component
+ * @param props LandingProps
+ * @returns Landing page component
  */
 export default function Landing(props: LandingProps) {
-  const { homeRef, projectsRef } = props;
+  const { homeRef, projectsRef, experienceRef } = props;
 
   return (
     <section className="page blue-page d-flex flex-column ">
@@ -24,6 +28,9 @@ export default function Landing(props: LandingProps) {
       </section>
       <section ref={projectsRef}>
         <ProjectsBar />
+      </section>
+      <section ref={experienceRef}>
+        <ExperienceBar />
       </section>
     </section>
   );

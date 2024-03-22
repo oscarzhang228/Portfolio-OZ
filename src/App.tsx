@@ -11,6 +11,7 @@ import Navigation from "./components/Navigation/Navigation";
 function App() {
   const homeRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
+  const experienceRef = useRef<HTMLElement>(null);
 
   return (
     <Router>
@@ -18,7 +19,13 @@ function App() {
       <Routes>
         <Route
           index
-          element={<Landing homeRef={homeRef} projectsRef={projectsRef} />}
+          element={
+            <Landing
+              homeRef={homeRef}
+              projectsRef={projectsRef}
+              experienceRef={experienceRef}
+            />
+          }
         ></Route>
       </Routes>
     </Router>

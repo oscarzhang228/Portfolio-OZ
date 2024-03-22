@@ -17,7 +17,8 @@ const imageMap: any = {
 
 const firstThreeProjects = projects.slice(0, 3);
 /**
- * ProjectsBar component used to display projects.
+ * ProjectsBar component used to display the first three projects in the projects.json file on the landing page
+ * @returns ProjectsBar component
  */
 export default function ProjectsBar() {
   const navigate = useNavigate();

@@ -2,7 +2,8 @@ import profilePic from "../../assets/profile-pic.png";
 import styles from "./Profile.module.scss";
 
 /**
- * Profile section for the website. Displayed at the top
+ * Profile component used to display the profile picture, name, and description on the landing page
+ * @returns Profile component
  */
 export default function Profile() {
   return (
@@ -18,7 +19,3 @@ export default function Profile() {
     </section>
   );
 }
-
-// Logo
-// Software Engineer
-// I build value through creating scalable and easy to read software.
