@@ -1,9 +1,9 @@
 import styles from "./ProjectsBar.module.scss";
 import Card from "@mui/material/Card";
-import { CardContent, CardActions, Chip } from "@mui/material";
+import { CardContent, CardActions } from "@mui/material";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-
+import TechnologyChip from "../TechnologyChip/TechnologyChip";
 import oudAppPic from "../../assets/oud-app.png";
 import marketSafePic from "../../assets/market-safe.png";
 import skyviewPic from "../../assets/skyview-portal.png";
@@ -102,22 +102,7 @@ const Project = (props: ProjectProps) => {
         <p className={`${styles["Project-Body"]} px-3`}>{description}</p>
         <section className="d-flex flex-wrap gap-2 justify-content-center">
           {technologies?.map((tech, index) => {
-            return (
-              <Chip
-                key={index}
-                label={tech}
-                sx={{
-                  fontWeight: "400",
-                  fontFamily: "Poppins, sans-serif",
-                  transition: "500ms",
-                  "&:hover": {
-                    backgroundColor: "rgb(155, 184, 205)",
-                    transform: "translateY(-5px)",
-                    transition: "500ms",
-                  },
-                }}
-              />
-            );
+            return <TechnologyChip key={index} label={tech} />;
           })}
         </section>
       </CardContent>
