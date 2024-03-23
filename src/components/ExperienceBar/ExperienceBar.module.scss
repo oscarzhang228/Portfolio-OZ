@@ -1,2 +1,53 @@
+@use "../../styles/variables.scss" as *;
 .ExperienceBar {
+}
+
+.ExperienceBar-Header {
+  font-size: 2.5rem;
+  font-weight: 500;
+
+  // width at which 3 projects split into 2 rows
+  @media screen and (max-width: 1025px) {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 769px) {
+    font-size: 2.3rem;
+  }
+  // for mobile devices
+  @media screen and (max-width: 576px) {
+    font-size: 2.1rem;
+  }
+}
+
+.Experience-Logo {
+  max-width: 8rem;
+}
+
+.Experience-Title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  // for tablets
+  @media screen and (max-width: 769px) {
+    font-size: 1.7rem;
+  }
+  // for mobile devices
+  @media screen and (max-width: 576px) {
+    font-size: 1.5rem;
+  }
+}
+
+.Experience-Subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-left: 0.1rem;
+}
+
+.Experience-Body {
+  font-size: 0.9rem;
+  font-weight: 400;
+  // for mobile devices and small tablets
+  @media screen and (max-width: 576px) {
+    font-size: 0.7rem;
+  }
 }
