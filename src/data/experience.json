@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Software Engineer Intern",
+    "company": "Fyve By",
+    "description": "An aviation startup in the ground damage prevention space creating digital clones for hangars. I worked on the backend and front-end of their web application for managers to oversee scheduling, template hangars, and account/billing details. I also worked on the iOS application for crew moving planes to be able to see the created templates as well as for near-collision alarms when moving too close to another plane. This application utilized Unity to be able to simulate the hangar in 3D space as well as track collisions.",
+    "logo": "fyvebyLogo",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "AWS Api Gateway",
+      "AWS DynamoDB",
+      "Swift",
+      "C#"
+    ]
+  },
+  {
+    "title": "Software Developer",
+    "company": "GT SocWeB Lab",
+    "description": "Lab at the Georgia Institue of Technology focused on using algorithms and AI to study how social media plays a role in wellbeing and mental health. I worked to create a web application for an opioid use disorder study for participants to be able to view both GPT-4 generated and human written responses related to opioid use. I worked on creating features such as analytics tracking through a custom hook and MongoDB, a quiz system, as well as support for multiple days of responses.",
+    "logo": "socwebLogo",
+    "technologies": ["React", "Typescript", "Vercel", "SASS", "MongoDB"]
+  }
+]
