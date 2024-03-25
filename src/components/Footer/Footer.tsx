@@ -9,7 +9,9 @@ export default function Footer() {
     <footer
       className={`${styles["Footer"]} d-flex justify-content-between align-items-center p-3`}
     >
-      <p className={`${styles["Footer-Content"]} m-0`}>© {year} Oscar Zhang</p>
+      <p className={`${styles["Footer-Content"]} m-0 px-2`}>
+        © {year} Oscar Zhang
+      </p>
       <SocialBar />
     </footer>
   );

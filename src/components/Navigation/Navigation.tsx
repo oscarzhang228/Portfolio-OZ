@@ -77,9 +77,9 @@ export default function Navigation(props: NavigationProps) {
             text="Experience"
             onClick={() => handleNavigationSamePage(experienceRef)}
           />
-          <Divider />
+          {/* <Divider />
           <NavigationItem icon={<PersonOutlinedIcon />} text="About" />
-          <NavigationItem icon={<LocalPhoneOutlinedIcon />} text="Contact" />
+          <NavigationItem icon={<LocalPhoneOutlinedIcon />} text="Contact" /> */}
 
           {/*This section is used to separate the navigation items at the top and the ones at the bottom */}
           <section className="mt-auto"></section>
