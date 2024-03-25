@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Navigation from "./components/Navigation/Navigation";
+import Footer from "./components/Footer/Footer";
 
 /**
  * Main application component
@@ -32,6 +33,7 @@ function App() {
           }
         ></Route>
       </Routes>
+      <Footer />
     </Router>
   );
 }
