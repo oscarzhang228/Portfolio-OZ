@@ -14,6 +14,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { ReactElement } from "react";
+import { useNavigate } from "react-router-dom";
 
 type NavigationProps = {
   homeRef: React.RefObject<HTMLElement>;
@@ -28,6 +29,7 @@ type NavigationProps = {
  */
 export default function Navigation(props: NavigationProps) {
   const { homeRef, projectsRef, experienceRef } = props;
+  const navigate = useNavigate();
 
   const [open, setOpen] = useState<boolean>(false);
 
@@ -40,14 +42,20 @@ export default function Navigation(props: NavigationProps) {
    * @param ref reference to the element to scroll to
    */
   const handleNavigationSamePage = (ref: React.RefObject<HTMLElement>) => {
+    navigate("/");
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
     toggleDrawer();
   };
 
+  /**
+   * Handles the click event for the navigation items to external links
+   * @param link linke to navigate to
+   */
   const handleNavigationExternal = (link: string) => {
     window.open(link, "_blank");
+    toggleDrawer();
   };
   return (
     <>

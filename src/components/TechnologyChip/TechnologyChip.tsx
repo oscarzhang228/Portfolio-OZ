@@ -1,7 +1,7 @@
 import Chip from "@mui/material/Chip";
 
 type TechnologyChipProps = {
-  key: number;
+  keyProp: number;
   label: string;
 };
 
@@ -11,10 +11,10 @@ type TechnologyChipProps = {
  * @returns TechnologyChip component
  */
 export default function TechnologyChip(props: TechnologyChipProps) {
-  const { key, label } = props;
+  const { keyProp, label } = props;
   return (
     <Chip
-      key={key}
+      key={keyProp}
       label={label}
       sx={{
         fontWeight: "400",

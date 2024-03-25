@@ -5,6 +5,7 @@ import Landing from "./pages/Landing";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
 
+import ProjectsArchive from "./pages/ProjectsArchive";
 /**
  * Main application component
  * @returns Main application component
@@ -31,7 +32,8 @@ function App() {
               experienceRef={experienceRef}
             />
           }
-        ></Route>
+        />
+        <Route path="/projects" element={<ProjectsArchive />} />
       </Routes>
       <Footer />
     </Router>

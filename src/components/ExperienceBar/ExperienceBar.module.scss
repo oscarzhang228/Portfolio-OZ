@@ -1,25 +1,11 @@
 @use "../../styles/mixins" as *;
-
+@use "../../styles/variables" as *;
 .ExperienceBar-Experience {
   @include card-hover;
 }
 
 .ExperienceBar-Header {
-  font-size: 2.5rem;
-  font-weight: 500;
-
-  // width at which 3 projects split into 2 rows
-  @media screen and (max-width: 1025px) {
-    text-align: center;
-  }
-
-  @media screen and (max-width: 769px) {
-    font-size: 2.3rem;
-  }
-  // for mobile devices
-  @media screen and (max-width: 576px) {
-    font-size: 2.1rem;
-  }
+  @include section-heading;
 }
 
 .Experience-Logo {
@@ -28,7 +14,8 @@
 
 .Experience-Title {
   font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: $main-font;
   // for tablets
   @media screen and (max-width: 769px) {
     font-size: 1.7rem;

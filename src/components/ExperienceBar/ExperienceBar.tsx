@@ -24,7 +24,7 @@ export default function ExperienceBar() {
       <h1 className={`${styles["ExperienceBar-Header"]} p-2 px-3`}>
         I've worked with:
       </h1>
-      <section className="p-3 d-flex flex-column gap-2">
+      <section className="p-1 p-sm-3 d-flex flex-column gap-2">
         {experiences.map((experience: any, index: number) => {
           return (
             <section
@@ -91,7 +91,7 @@ const Experience = (props: ExperienceProps) => {
           </p>
           <section className="px-4 pb-2 d-lg-flex d-none gap-2 justify-content-end ">
             {technologies?.map((tech, index) => {
-              return <TechnologyChip key={index} label={tech} />;
+              return <TechnologyChip keyProp={index} label={tech} />;
             })}
           </section>
         </section>

@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 .page {
   // make sure pages fill up the screen
@@ -15,4 +16,11 @@
 
 .hero {
   min-height: 100vh;
+}
+.projectsArchive {
+  background-color: $off-white;
+}
+
+.projectsArchive-heading {
+  @include section-heading;
 }

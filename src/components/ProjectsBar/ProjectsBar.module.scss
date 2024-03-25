@@ -6,21 +6,7 @@
 }
 
 .ProjectsBar-Header {
-  font-size: 2.5rem;
-  font-weight: 500;
-
-  // width at which 3 projects split into 2 rows
-  @media screen and (max-width: 1025px) {
-    text-align: center;
-  }
-
-  @media screen and (max-width: 769px) {
-    font-size: 2.3rem;
-  }
-  // for mobile devices
-  @media screen and (max-width: 576px) {
-    font-size: 2.1rem;
-  }
+  @include section-heading;
 }
 
 .Project-Title {

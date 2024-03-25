@@ -27,7 +27,7 @@ export default function Landing(props: LandingProps) {
         <SocialBar />
       </section>
       <section ref={projectsRef}>
-        <ProjectsBar />
+        <ProjectsBar numProjects={3} />
       </section>
       <section ref={experienceRef}>
         <ExperienceBar />
