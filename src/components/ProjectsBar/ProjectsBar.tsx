@@ -1,7 +1,7 @@
 import styles from "./ProjectsBar.module.scss";
 import Card from "@mui/material/Card";
 import { CardContent, CardActions } from "@mui/material";
-import Button from "@mui/material/Button";
+import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 import TechnologyChip from "../TechnologyChip/TechnologyChip";
 import oudAppPic from "../../assets/oud-app.png";
@@ -48,15 +48,11 @@ export default function ProjectsBar() {
       </section>
       <section className={`${styles["ProjectsBar-AllProjects"]}`}>
         <Button
-          sx={learnMoreButtonStyle}
           onClick={() => {
             navigate("/projects");
           }}
-          variant="outlined"
-          disabled
-        >
-          All Projects
-        </Button>
+          label="All Projects"
+        ></Button>
       </section>
     </section>
   );
@@ -108,26 +104,12 @@ const Project = (props: ProjectProps) => {
       </CardContent>
       <CardActions className="d-flex justify-content-center align-items-end mt-auto ">
         <Button
-          sx={learnMoreButtonStyle}
           onClick={() => {
             window.open(projectLink, "_blank");
           }}
-          variant="outlined"
-        >
-          Learn More
-        </Button>
+          label={"Learn More"}
+        ></Button>
       </CardActions>
     </Card>
   );
-};
-
-const learnMoreButtonStyle = {
-  fontFamily: "Poppins, sans-serif",
-  color: "black",
-  border: "none",
-  "&:hover": {
-    transform: "translateY(-5px)",
-    transition: "500ms",
-    border: "none",
-  },
 };

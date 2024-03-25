@@ -18,6 +18,7 @@ import { ReactElement } from "react";
 type NavigationProps = {
   homeRef: React.RefObject<HTMLElement>;
   projectsRef: React.RefObject<HTMLElement>;
+  experienceRef: React.RefObject<HTMLElement>;
 };
 
 /**
@@ -26,7 +27,7 @@ type NavigationProps = {
  * @returns Navigation component used to display the navigation bar.
  */
 export default function Navigation(props: NavigationProps) {
-  const { homeRef, projectsRef } = props;
+  const { homeRef, projectsRef, experienceRef } = props;
 
   const [open, setOpen] = useState<boolean>(false);
 
@@ -74,6 +75,7 @@ export default function Navigation(props: NavigationProps) {
           <NavigationItem
             icon={<WorkOutlineOutlinedIcon />}
             text="Experience"
+            onClick={() => handleNavigationSamePage(experienceRef)}
           />
           <Divider />
           <NavigationItem icon={<PersonOutlinedIcon />} text="About" />

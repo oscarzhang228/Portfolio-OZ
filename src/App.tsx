@@ -15,7 +15,11 @@ function App() {
 
   return (
     <Router>
-      <Navigation homeRef={homeRef} projectsRef={projectsRef} />
+      <Navigation
+        homeRef={homeRef}
+        projectsRef={projectsRef}
+        experienceRef={experienceRef}
+      />
       <Routes>
         <Route
           index

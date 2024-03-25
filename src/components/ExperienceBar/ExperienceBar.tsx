@@ -5,6 +5,7 @@ import fyvebyLogo from "../../assets/fyveby.png";
 import socwebLogo from "../../assets/socweb.jpg";
 import TechnologyChip from "../TechnologyChip/TechnologyChip";
 import experiences from "../../data/experience.json";
+import Button from "../Button/Button";
 
 const imageMap: any = {
   fyvebyLogo: fyvebyLogo,
@@ -41,6 +42,17 @@ export default function ExperienceBar() {
           );
         })}
       </section>
+      <section className="px-2">
+        <Button
+          onClick={() =>
+            window.open(
+              "https://drive.google.com/file/d/1oh-SenQzfQggCx2H306BzVdGYuu7ZDfN/view?usp=sharing",
+              "_blank"
+            )
+          }
+          label="View Resume"
+        />
+      </section>
     </section>
   );
 }
@@ -60,7 +72,9 @@ type ExperienceProps = {
 const Experience = (props: ExperienceProps) => {
   const { title, company, description, logo, technologies } = props;
   return (
-    <Card className="container-flex p-3">
+    <Card
+      className={`${styles["ExperienceBar-Experience"]} container-flex p-3`}
+    >
       <section className="row">
         <section className="col-lg-3 d-flex align-items-center gap-4 flex-wrap">
           <CardMedia className={`${styles["Experience-Logo"]}`}>

@@ -2,7 +2,7 @@
   {
     "title": "Software Engineer Intern",
     "company": "Fyve By",
-    "description": "An aviation startup in the ground damage prevention space creating digital clones for hangars. I worked on the backend and front-end of their web application for managers to oversee scheduling, template hangars, and account/billing details. I also worked on the iOS application for crew moving planes to be able to see the created templates as well as for near-collision alarms when moving too close to another plane. This application utilized Unity to be able to simulate the hangar in 3D space as well as track collisions.",
+    "description": "An aviation startup in the ground damage prevention space creating digital clones for hangars. I worked on the back-end and front-end of their web application for managers to oversee scheduling, template hangars, and account/billing details. I also worked on the iOS application for crew moving planes to be able to see the created templates as well as for near-collision alarms when moving too close to another plane. This application utilized Unity to be able to simulate the hangar in 3D space as well as track collisions.",
     "logo": "fyvebyLogo",
     "technologies": [
       "React",
