@@ -7,14 +7,12 @@ import { Divider } from "@mui/material";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ChecklistIcon from "@mui/icons-material/Checklist";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
-// import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-// import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { ReactElement } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Location } from "react-router-dom";
 
 type NavigationProps = {
   homeRef: React.RefObject<HTMLElement>;
@@ -30,6 +28,7 @@ type NavigationProps = {
 export default function Navigation(props: NavigationProps) {
   const { homeRef, projectsRef, experienceRef } = props;
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [open, setOpen] = useState<boolean>(false);
 
@@ -38,15 +37,32 @@ export default function Navigation(props: NavigationProps) {
   };
 
   /**
-   * Handles the click event for the navigation items on the same page
+   * Handles the click event for the navigation items on the same page. If not on the same page it'll navigate to the home page and then scroll to the element.
+   * @param location location to navigate to
    * @param ref reference to the element to scroll to
    */
-  const handleNavigationSamePage = (ref: React.RefObject<HTMLElement>) => {
-    navigate("/");
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+  const handleNavigationSamePage = (
+    location: Location<any>,
+    ref: React.RefObject<HTMLElement>
+  ) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        scrollToElement(ref);
+      }, 500);
+    } else {
+      scrollToElement(ref);
     }
+
     toggleDrawer();
+  };
+
+  /**
+   * Scrolls to the element
+   * @param ref reference to the element to scroll to
+   */
+  const scrollToElement = (ref: React.RefObject<HTMLElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   /**
@@ -72,24 +88,19 @@ export default function Navigation(props: NavigationProps) {
           <NavigationItem
             icon={<HomeOutlinedIcon />}
             text="Home"
-            onClick={() => handleNavigationSamePage(homeRef)}
+            onClick={() => handleNavigationSamePage(location, homeRef)}
           />
           <Divider />
           <NavigationItem
             icon={<ChecklistIcon />}
             text="Projects"
-            onClick={() => handleNavigationSamePage(projectsRef)}
+            onClick={() => handleNavigationSamePage(location, projectsRef)}
           />
           <NavigationItem
             icon={<WorkOutlineOutlinedIcon />}
             text="Experience"
-            onClick={() => handleNavigationSamePage(experienceRef)}
+            onClick={() => handleNavigationSamePage(location, experienceRef)}
           />
-          {/* <Divider />
-          <NavigationItem icon={<PersonOutlinedIcon />} text="About" />
-          <NavigationItem icon={<LocalPhoneOutlinedIcon />} text="Contact" /> */}
-
-          {/*This section is used to separate the navigation items at the top and the ones at the bottom */}
           <section className="mt-auto"></section>
           <NavigationItem
             icon={<ArticleOutlinedIcon />}
