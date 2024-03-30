@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
 
 import ProjectsArchive from "./pages/ProjectsArchive";
+import { ScrollWrapper } from "./components/ScrollWrapper";
 /**
  * Main application component
  * @returns Main application component
@@ -22,20 +23,22 @@ function App() {
         projectsRef={projectsRef}
         experienceRef={experienceRef}
       />
-      <Routes>
-        <Route
-          index
-          element={
-            <Landing
-              homeRef={homeRef}
-              projectsRef={projectsRef}
-              experienceRef={experienceRef}
-            />
-          }
-        />
-        <Route path="/projects" element={<ProjectsArchive />} />
-      </Routes>
-      <Footer />
+      <ScrollWrapper>
+        <Routes>
+          <Route
+            index
+            element={
+              <Landing
+                homeRef={homeRef}
+                projectsRef={projectsRef}
+                experienceRef={experienceRef}
+              />
+            }
+          />
+          <Route path="/projects" element={<ProjectsArchive />} />
+        </Routes>
+        <Footer />
+      </ScrollWrapper>
     </Router>
   );
 }

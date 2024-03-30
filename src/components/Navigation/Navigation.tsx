@@ -49,7 +49,7 @@ export default function Navigation(props: NavigationProps) {
       navigate("/");
       setTimeout(() => {
         scrollToElement(ref);
-      }, 500);
+      }, 0);
     } else {
       scrollToElement(ref);
     }
