@@ -4,14 +4,16 @@ import oudAppPic from "../../assets/oud-app.png";
 import marketSafePic from "../../assets/market-safe.png";
 import skyviewPic from "../../assets/skyview-portal.png";
 import projects from "../../data/projects.json";
+import organizeMePic from "../../assets/organize-me.jpg";
 type ProjectsDisplayProps = {
   numProjects?: number;
 };
 
-const imageMap: any = {
+const imageMap: Record<string, string> = {
   oudAppPic: oudAppPic,
   marketSafePic: marketSafePic,
   skyviewPic: skyviewPic,
+  organizeMePic: organizeMePic,
 };
 
 export default function ProjectsDisplay(props: ProjectsDisplayProps) {

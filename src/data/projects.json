@@ -30,8 +30,16 @@
     "title": "Skyview Portal",
     "company": "Fyve By",
     "description": "An application for hangar managers in order to schedule plane arrivals and departures, view security footage of their hangar, and view their account and billing information. Features include a login system through AWS Cognito, a scheduling system, and a billing system.",
-    "projectLink": "https://fyvebyhub.com",
+    "projectLink": "https://www.fyvebyhub.com/",
     "projectImage": "skyviewPic",
     "technologies": ["React", "AWS DynamoDB", "AWS Lambda", "AWS Cognito"]
+  },
+  {
+    "title": "OrganizeMe",
+    "company": "EducateHacks 2024",
+    "description": "An application for students to automatically schedule time to study for exams and do assignments. This is done through getting assignment and test data from a learning management system and using OpenAI API to generate a schedule based on grade weight and a user prompt.",
+    "projectLink": "https://devpost.com/software/organizeme-uacglz",
+    "projectImage": "organizeMePic",
+    "technologies": ["React", "Node.js", "Express.js", "MongoDB", "OpenAI API"]
   }
 ]
