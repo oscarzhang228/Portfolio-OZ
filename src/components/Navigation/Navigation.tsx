@@ -20,6 +20,10 @@ type NavigationProps = {
   experienceRef: React.RefObject<HTMLElement>;
 };
 
+type LocationState = {
+  from: string;
+};
+
 /**
  * Navigation component used to display the navigation bar.
  * @param props properties containing the refs for navigation
@@ -42,7 +46,7 @@ export default function Navigation(props: NavigationProps) {
    * @param ref reference to the element to scroll to
    */
   const handleNavigationSamePage = (
-    location: Location<any>,
+    location: Location<LocationState>,
     ref: React.RefObject<HTMLElement>
   ) => {
     if (location.pathname !== "/") {

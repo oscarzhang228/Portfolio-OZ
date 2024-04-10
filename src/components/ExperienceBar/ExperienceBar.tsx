@@ -7,9 +7,17 @@ import TechnologyChip from "../TechnologyChip/TechnologyChip";
 import experiences from "../../data/experience.json";
 import Button from "../Button/Button";
 
-const imageMap: any = {
+const imageMap: Record<string, string> = {
   fyvebyLogo: fyvebyLogo,
   socwebLogo: socwebLogo,
+};
+
+type ExperienceData = {
+  title: string;
+  company: string;
+  description: string;
+  logo: keyof typeof imageMap;
+  technologies: string[];
 };
 
 /**
@@ -25,7 +33,7 @@ export default function ExperienceBar() {
         I've worked with:
       </h1>
       <section className="p-1 p-sm-3 d-flex flex-column gap-2">
-        {experiences.map((experience: any, index: number) => {
+        {experiences.map((experience: ExperienceData, index: number) => {
           return (
             <section
               className={`${styles["ExperienceBar-ExperienceContainer"]} `}
