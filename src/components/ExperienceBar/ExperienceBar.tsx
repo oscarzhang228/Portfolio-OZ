@@ -1,15 +1,17 @@
 import styles from "./ExperienceBar.module.scss";
 import Card from "@mui/material/Card";
 import { CardMedia } from "@mui/material";
-import fyvebyLogo from "../../assets/fyveby.png";
-import socwebLogo from "../../assets/socweb.jpg";
+import fyvebyLogo from "../../assets/fyveby-logo.png";
+import socwebLogo from "../../assets/socweb-logo.jpg";
 import TechnologyChip from "../TechnologyChip/TechnologyChip";
 import experiences from "../../data/experience.json";
 import Button from "../Button/Button";
+import paypalLogo from "../../assets/paypal-logo.png";
 
 const imageMap: Record<string, string> = {
   fyvebyLogo: fyvebyLogo,
   socwebLogo: socwebLogo,
+  paypalLogo: paypalLogo,
 };
 
 type ExperienceData = {
@@ -30,7 +32,7 @@ export default function ExperienceBar() {
       className={`${styles["ExperienceBar"]} p-2 p-lg-5 d-flex flex-column gap-2`}
     >
       <h1 className={`${styles["ExperienceBar-Header"]} p-2 px-3`}>
-        I've worked with:
+        I've worked for:
       </h1>
       <section className="p-1 p-sm-3 d-flex flex-column gap-2">
         {experiences.map((experience: ExperienceData, index: number) => {
