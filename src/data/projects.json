@@ -30,7 +30,7 @@
     "title": "Skyview Portal",
     "company": "Fyve By",
     "description": "An application for hangar managers in order to schedule plane arrivals and departures, view security footage of their hangar, and view their account and billing information. Features include a login system through AWS Cognito, a scheduling system, and a billing system.",
-    "projectLink": "https://www.fyvebyhub.com/",
+    "projectLink": "",
     "projectImage": "skyviewPic",
     "technologies": ["React", "AWS DynamoDB", "AWS Lambda", "AWS Cognito"]
   },

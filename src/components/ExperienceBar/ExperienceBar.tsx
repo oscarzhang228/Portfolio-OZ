@@ -1,17 +1,21 @@
 import styles from "./ExperienceBar.module.scss";
 import Card from "@mui/material/Card";
 import { CardMedia } from "@mui/material";
-import fyvebyLogo from "../../assets/fyveby-logo.png";
-import socwebLogo from "../../assets/socweb-logo.jpg";
+
+import fyvebyLogo from "/src/assets/fyveby-logo.png";
+import socwebLogo from "/src/assets/socweb-logo.jpg";
+import paypalLogo from "/src/assets/paypal-logo.png";
+import molecularLogo from "/src/assets/molecular-logo.png";
+
 import TechnologyChip from "../TechnologyChip/TechnologyChip";
 import experiences from "../../data/experience.json";
 import Button from "../Button/Button";
-import paypalLogo from "../../assets/paypal-logo.png";
 
 const imageMap: Record<string, string> = {
   fyvebyLogo: fyvebyLogo,
   socwebLogo: socwebLogo,
   paypalLogo: paypalLogo,
+  molecularLogo: molecularLogo,
 };
 
 type ExperienceData = {

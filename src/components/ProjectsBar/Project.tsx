@@ -46,14 +46,16 @@ export default function Project(props: ProjectProps) {
           })}
         </section>
       </CardContent>
-      <CardActions className="d-flex justify-content-center align-items-end mt-auto ">
-        <Button
-          onClick={() => {
-            window.open(projectLink, "_blank");
-          }}
-          label={"Learn More"}
-        ></Button>
-      </CardActions>
+      {projectLink && (
+        <CardActions className="d-flex justify-content-center align-items-end mt-auto ">
+          <Button
+            onClick={() => {
+              window.open(projectLink, "_blank");
+            }}
+            label={"Learn More"}
+          ></Button>
+        </CardActions>
+      )}
     </Card>
   );
 }

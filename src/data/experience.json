@@ -2,14 +2,21 @@
   {
     "title": "Software Engineer Intern",
     "company": "PayPal",
-    "description": "PayPal is an online payment system that allows you to send and receive money around the world. I worked on creating internal tools for testing developer APIs and new product releases. The main project I worked on was a mock storefront that allowed developers to easily edit and test API endpoints through an interface that was like what the consumer would see.",
+    "description": "At PayPal, I contributed to the development of internal tools designed to test developer APIs and new product releases. My primary project involved creating a mock storefront that simulated a consumer-facing interface, allowing developers to edit and test API endpoints effectively.",
     "logo": "paypalLogo",
     "technologies": ["Next.js", "Java", "Spring", "TypeScript", "Node.js"]
   },
   {
+    "title": "Student Software Developer",
+    "company": "MolEvo Lab",
+    "description": "In the Molecular Evolution Core Lab, I developed web applications for Sanger Sequencing and TipCycle, enhancing systems for client management and technician workflows. My efforts included leading performance optimizations by reducing bundle sizes and eliminating redundant code.",
+    "logo": "molecularLogo",
+    "technologies": ["React", "Typescript", "Docker", "Node.js", "MongoDB"]
+  },
+  {
     "title": "Software Engineer Intern",
     "company": "Fyve By",
-    "description": "An aviation startup in the ground damage prevention space creating digital clones for hangars. I worked on the back-end and front-end of their web application for managers to oversee scheduling, template hangars, and account/billing details. I also worked on the iOS application for crew moving planes to be able to see the created templates as well as for near-collision alarms when moving too close to another plane. This application utilized Unity to be able to simulate the hangar in 3D space as well as track collisions.",
+    "description": "At Fyve By, an aviation startup, I worked on both backend and frontend development for a web application managing hangar scheduling and operations. Additionally, I developed an iOS app integrating Unity for 3D hangar simulations and collision detection to assist ground crews.",
     "logo": "fyvebyLogo",
     "technologies": [
       "React",
@@ -20,9 +27,9 @@
     ]
   },
   {
-    "title": "Software Developer",
-    "company": "GT SocWeB Lab",
-    "description": "Lab at the Georgia Institue of Technology focused on using algorithms and AI to study how social media plays a role in wellbeing and mental health. I worked to create a web application for an opioid use disorder study for participants to be able to view both GPT-4 generated and human written responses related to opioid use. I worked on creating features such as analytics tracking through a custom hook and MongoDB, a quiz system, as well as support for multiple days of responses.",
+    "title": "Student Software Developer",
+    "company": "SocWeb Lab",
+    "description": "At the Georgia Institute of Technology's Social Dynamics and Well-Being Lab, I created a web application for an opioid use disorder study. The platform featured analytics tracking, a quiz system, and supported interaction with GPT-4 generated and human-written content.",
     "logo": "socwebLogo",
     "technologies": ["React", "Typescript", "Vercel", "SASS", "MongoDB"]
   }

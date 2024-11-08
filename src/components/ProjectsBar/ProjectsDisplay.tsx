@@ -5,8 +5,18 @@ import marketSafePic from "../../assets/market-safe.png";
 import skyviewPic from "../../assets/skyview-portal.png";
 import projects from "../../data/projects.json";
 import organizeMePic from "../../assets/organize-me.jpg";
+
 type ProjectsDisplayProps = {
   numProjects?: number;
+};
+
+type Project = {
+  title: string;
+  company: string;
+  description: string;
+  projectLink: string;
+  projectImage: string;
+  technologies: string[];
 };
 
 const imageMap: Record<string, string> = {
@@ -52,6 +62,9 @@ export default function ProjectsDisplay(props: ProjectsDisplayProps) {
  * @param projects list of projects
  * @returns true if valid and false is not
  */
-const isNumProjectsValid = (numProjects: number | undefined, projects: any) => {
+const isNumProjectsValid = (
+  numProjects: number | undefined,
+  projects: Project[]
+) => {
   return numProjects && numProjects > 0 && numProjects <= projects.length;
 };
