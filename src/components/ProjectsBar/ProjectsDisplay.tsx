@@ -5,6 +5,7 @@ import marketSafePic from "../../assets/market-safe.png";
 import skyviewPic from "../../assets/skyview-portal.png";
 import projects from "../../data/projects.json";
 import organizeMePic from "../../assets/organize-me.jpg";
+import reactLogo from "../../assets/react-logo.svg";
 
 type ProjectsDisplayProps = {
   numProjects?: number;
@@ -24,13 +25,14 @@ const imageMap: Record<string, string> = {
   marketSafePic: marketSafePic,
   skyviewPic: skyviewPic,
   organizeMePic: organizeMePic,
+  reactSetupPic: reactLogo,
 };
 
 export default function ProjectsDisplay(props: ProjectsDisplayProps) {
   const { numProjects } = props;
   const projectsToDisplay = projects.slice(
     0,
-    isNumProjectsValid(numProjects, projects) ? numProjects : projects.length
+    isNumProjectsValid(numProjects, projects) ? numProjects : projects.length,
   );
 
   return (
@@ -64,7 +66,7 @@ export default function ProjectsDisplay(props: ProjectsDisplayProps) {
  */
 const isNumProjectsValid = (
   numProjects: number | undefined,
-  projects: Project[]
+  projects: Project[],
 ) => {
   return numProjects && numProjects > 0 && numProjects <= projects.length;
 };

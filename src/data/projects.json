@@ -41,5 +41,13 @@
     "projectLink": "https://devpost.com/software/organizeme-uacglz",
     "projectImage": "organizeMePic",
     "technologies": ["React", "Node.js", "Express.js", "MongoDB", "OpenAI API"]
+  },
+  {
+    "title": "React Setup",
+    "company": "Personal Project",
+    "description": "An application where I setup a React application from scratch in order to learn about the parts of an application, using Webpack for bundling, Babel for transpilation, ESLint for linting, Prettier for code formatting, and Husky for Git Hooks.",
+    "projectLink": "https://github.com/oscarzhang228/ReactSetup",
+    "projectImage": "reactSetupPic",
+    "technologies": ["React", "Webpack", "Babel", "ESLint", "Prettier", "Husky"]
   }
 ]
