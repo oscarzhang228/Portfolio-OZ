@@ -6,6 +6,7 @@ import skyviewPic from "../../assets/skyview-portal.png";
 import projects from "../../data/projects.json";
 import organizeMePic from "../../assets/organize-me.jpg";
 import reactLogo from "../../assets/react-logo.svg";
+import phishermanLanding from "../../assets/phishermanLanding.png";
 
 type ProjectsDisplayProps = {
   numProjects?: number;
@@ -26,6 +27,7 @@ const imageMap: Record<string, string> = {
   skyviewPic: skyviewPic,
   organizeMePic: organizeMePic,
   reactSetupPic: reactLogo,
+  phishermanLanding: phishermanLanding,
 };
 
 export default function ProjectsDisplay(props: ProjectsDisplayProps) {

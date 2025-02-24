@@ -1,15 +1,15 @@
 [
   {
-    "title": "OUD App",
-    "company": "SocWeB Lab",
-    "description": "A web application for an ongoing study surrounding how those with Opioid Use Disorder react to GPT-4 responses versus user responses. Features include tracking analytics such as time spent on each page, getting the responses to show, as well as an automatic glossary feature.",
-    "projectLink": "https://github.com/oscarzhang228/SocWeB-Opioid-Study",
-    "projectImage": "oudAppPic",
+    "title": "Phisherman",
+    "company": "Hackalytics 2025",
+    "description": "An application to launch simulated cybersecurity attacks such as custom phishing email chains and phone calls with voice emulation. The frontend was built in React + Tailwind and the backend used Flask, MongoDB, and Retell AI.",
+    "projectLink": "https://devpost.com/software/phisherman-4x1vw5",
+    "projectImage": "phishermanLanding",
     "technologies": [
       "React",
-      "TypeScript",
+      "Flask",
       "MongoDB",
-      "Vercel Serverless Functions"
+      "Retell AI"
     ]
   },
   {
@@ -32,15 +32,12 @@
     "description": "An application for hangar managers in order to schedule plane arrivals and departures, view security footage of their hangar, and view their account and billing information. Features include a login system through AWS Cognito, a scheduling system, and a billing system.",
     "projectLink": "",
     "projectImage": "skyviewPic",
-    "technologies": ["React", "AWS DynamoDB", "AWS Lambda", "AWS Cognito"]
-  },
-  {
-    "title": "OrganizeMe",
-    "company": "EducateHacks 2024",
-    "description": "An application for students to automatically schedule time to study for exams and do assignments. This is done through getting assignment and test data from a learning management system and using OpenAI API to generate a schedule based on grade weight and a user prompt.",
-    "projectLink": "https://devpost.com/software/organizeme-uacglz",
-    "projectImage": "organizeMePic",
-    "technologies": ["React", "Node.js", "Express.js", "MongoDB", "OpenAI API"]
+    "technologies": [
+      "React",
+      "AWS DynamoDB",
+      "AWS Lambda",
+      "AWS Cognito"
+    ]
   },
   {
     "title": "React Setup",
@@ -48,6 +45,40 @@
     "description": "An application where I setup a React application from scratch in order to learn about the parts of an application, using Webpack for bundling, Babel for transpilation, ESLint for linting, Prettier for code formatting, and Husky for Git Hooks.",
     "projectLink": "https://github.com/oscarzhang228/ReactSetup",
     "projectImage": "reactSetupPic",
-    "technologies": ["React", "Webpack", "Babel", "ESLint", "Prettier", "Husky"]
+    "technologies": [
+      "React",
+      "Webpack",
+      "Babel",
+      "ESLint",
+      "Prettier",
+      "Husky"
+    ]
+  },
+  {
+    "title": "OUD App",
+    "company": "SocWeB Lab",
+    "description": "A web application for an ongoing study surrounding how those with Opioid Use Disorder react to GPT-4 responses versus user responses. Features include tracking analytics such as time spent on each page, getting the responses to show, as well as an automatic glossary feature.",
+    "projectLink": "https://github.com/oscarzhang228/SocWeB-Opioid-Study",
+    "projectImage": "oudAppPic",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "MongoDB",
+      "Vercel Serverless Functions"
+    ]
+  },
+  {
+    "title": "OrganizeMe",
+    "company": "EducateHacks 2024",
+    "description": "An application for students to automatically schedule time to study for exams and do assignments. This is done through getting assignment and test data from a learning management system and using OpenAI API to generate a schedule based on grade weight and a user prompt.",
+    "projectLink": "https://devpost.com/software/organizeme-uacglz",
+    "projectImage": "organizeMePic",
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "OpenAI API"
+    ]
   }
 ]
