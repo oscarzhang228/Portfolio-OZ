@@ -7,16 +7,9 @@
     "technologies": ["Next.js", "Java", "Spring", "TypeScript", "Node.js"]
   },
   {
-    "title": "Student Software Developer",
-    "company": "MolEvo Lab",
-    "description": "In the Molecular Evolution Core Lab, I developed web applications for Sanger Sequencing and TipCycle, enhancing systems for client management and technician workflows. My efforts included leading performance optimizations by reducing bundle sizes and eliminating redundant code.",
-    "logo": "molecularLogo",
-    "technologies": ["React", "Typescript", "Docker", "Node.js", "MongoDB"]
-  },
-  {
     "title": "Software Engineer Intern",
     "company": "Fyve By",
-    "description": "At Fyve By, an aviation startup, I worked on both backend and frontend development for a web application managing hangar scheduling and operations. Additionally, I developed an iOS app integrating Unity for 3D hangar simulations and collision detection to assist ground crews.",
+    "description": "At Fyve By, an aviation technology startup, I worked on both backend and frontend development for a web application managing hangar scheduling and operations. Additionally, I developed an iOS app integrating Unity for 3D hangar simulations and collision detection to assist ground crews.",
     "logo": "fyvebyLogo",
     "technologies": [
       "React",
@@ -25,12 +18,5 @@
       "AWS DynamoDB",
       "C#"
     ]
-  },
-  {
-    "title": "Student Software Developer",
-    "company": "SocWeb Lab",
-    "description": "At the Georgia Institute of Technology's Social Dynamics and Well-Being Lab, I created a web application for an opioid use disorder study. The platform featured analytics tracking, a quiz system, and supported interaction with GPT-4 generated and human-written content.",
-    "logo": "socwebLogo",
-    "technologies": ["React", "Typescript", "Vercel", "SASS", "MongoDB"]
   }
 ]
