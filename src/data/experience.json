@@ -2,21 +2,15 @@
   {
     "title": "Software Engineer Intern",
     "company": "PayPal",
-    "description": "At PayPal, I contributed to the development of internal tools designed to test developer APIs and new product releases. My primary project involved creating a mock storefront that simulated a consumer-facing interface, allowing developers to edit and test API endpoints effectively.",
+    "description": "I contributed to the development of internal tools designed to test developer APIs and new product releases. My primary project involved creating a mock storefront that simulated a consumer-facing interface that a merchant might have, allowing developers to edit and test API endpoints effectively.",
     "logo": "paypalLogo",
     "technologies": ["Next.js", "Java", "Spring", "TypeScript", "Node.js"]
   },
   {
     "title": "Software Engineer Intern",
     "company": "Fyve By",
-    "description": "At Fyve By, an aviation technology startup, I worked on both backend and frontend development for a web application managing hangar scheduling and operations. Additionally, I developed an iOS app integrating Unity for 3D hangar simulations and collision detection to assist ground crews.",
+    "description": "I built from scratch the frontend interface for the Skyview System which was a digital clone that hangar owners could use to prevent ground damages to aircraft. This was a real-time application built in Unity and C# that required high-performance and precision (<= 10ms latency and 2cm distance errors). I also worked on an automatic plane scheduling application that used the Skyview System to track incoming planes.",
     "logo": "fyvebyLogo",
-    "technologies": [
-      "React",
-      "TypeScript",
-      "AWS Api Gateway",
-      "AWS DynamoDB",
-      "C#"
-    ]
+    "technologies": ["C#", "Unity", "React", "TypeScript", "AWS DynamoDB"]
   }
 ]

@@ -18,27 +18,29 @@ function App() {
 
   return (
     <Router>
-      <Navigation
-        homeRef={homeRef}
-        projectsRef={projectsRef}
-        experienceRef={experienceRef}
-      />
-      <ScrollWrapper>
-        <Routes>
-          <Route
-            index
-            element={
-              <Landing
-                homeRef={homeRef}
-                projectsRef={projectsRef}
-                experienceRef={experienceRef}
-              />
-            }
-          />
-          <Route path="/projects" element={<ProjectsArchive />} />
-        </Routes>
+      <div className="page off-white flex flex-col justify-between">
+        <Navigation
+          homeRef={homeRef}
+          projectsRef={projectsRef}
+          experienceRef={experienceRef}
+        />
+        <ScrollWrapper>
+          <Routes>
+            <Route
+              index
+              element={
+                <Landing
+                  homeRef={homeRef}
+                  projectsRef={projectsRef}
+                  experienceRef={experienceRef}
+                />
+              }
+            />
+            <Route path="/projects" element={<ProjectsArchive />} />
+          </Routes>
+        </ScrollWrapper>
         <Footer />
-      </ScrollWrapper>
+      </div>
     </Router>
   );
 }

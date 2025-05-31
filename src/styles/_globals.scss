@@ -10,15 +10,29 @@
     background-color: $light-blue;
   }
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
 
+.off-white {
+  background-color: $off-white;
+}
+
 .hero {
   min-height: 100vh;
-}
-.projectsArchive {
-  background-color: $off-white;
 }
 
 .projectsArchive-heading {
